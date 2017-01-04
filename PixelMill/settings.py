@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0b04@c(7@t+y5=@@n*8%*azud@8$upky-vu@%t8@6az_s+13#q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if True or os.environ.get('PM_DEVELOPMENT'):
+if os.environ.get('PM_DEVELOPMENT'):
     DEBUG = True
     DATABASES = {
         'default': {
@@ -34,9 +34,18 @@ if True or os.environ.get('PM_DEVELOPMENT'):
 
     }
 
-else:
+else: # 生产服务器
     DEBUG = False
-
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'pixelMill',
+            'USER': 'root',
+            'PASSWORD': 'nishengri7',
+            'HOST': '127.0.0.1',
+            'PORT': '3306',
+        }
+    }
 
 ALLOWED_HOSTS = ["192.168.1.103", '127.0.0.1', 'localhost']
 
@@ -128,7 +137,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
 
 # REST_FRAMEWORK = {
 #     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
