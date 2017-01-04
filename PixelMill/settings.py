@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0b04@c(7@t+y5=@@n*8%*azud@8$upky-vu@%t8@6az_s+13#q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if os.environ.get('PM_DEVELOPMENT'):
+if True or os.environ.get('PM_DEVELOPMENT'):
     DEBUG = True
     DATABASES = {
         'default': {
