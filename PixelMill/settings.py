@@ -26,6 +26,7 @@ SECRET_KEY = '0b04@c(7@t+y5=@@n*8%*azud@8$upky-vu@%t8@6az_s+13#q'
 # SECURITY WARNING: don't run with debug turned on in production!
 if os.environ.get('PM_DEVELOPMENT'):
     DEBUG = True
+    TEMPLATE_DEBUG = True
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -36,6 +37,7 @@ if os.environ.get('PM_DEVELOPMENT'):
 
 else: # 生产服务器
     DEBUG = False
+    TEMPLATE_DEBUG = False
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
