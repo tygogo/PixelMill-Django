@@ -20,10 +20,12 @@ from django.conf.urls.static import static
 
 # router = routers.DefaultRouter()
 # router.register(r'paint', views.PaintViewSet)
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^pm/', include('pm.urls'))
     # url(r'^', include(router.urls)),
     # url(r'^api-auth/', include('rest_framework.urls'), name='rest_framework'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + staticfiles_urlpatterns()
