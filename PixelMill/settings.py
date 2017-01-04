@@ -34,7 +34,6 @@ if os.environ.get('PM_DEVELOPMENT'):
 
     }
 
-
 else:
     DEBUG = False
 
