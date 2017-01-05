@@ -337,7 +337,7 @@ def get_paints_jsonarray(paints, user):
             "author": paint.author.username,
             "author_id": paint.author.pk,
             "like": like,
-            "like_count": paint.liker.count(),
+            "like_count": paint.liker.all().count(),
             "follow": follow
         }
         a.append(dd)
@@ -522,7 +522,7 @@ def api_dislike(request):
         user.save()
         r_dict['status'] = 1
         r_dict['text'] = 'SUCCESS',
-        r_dict['new_count'] = p.liker.count()
+        r_dict['new_count'] = p.liker.all().count()
     else:
         r_dict['status'] = 0
         r_dict['text'] = 'PAINT NOT EXIST'
