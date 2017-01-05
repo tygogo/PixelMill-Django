@@ -13,7 +13,7 @@ def api_login_required(view):
             return view(request, *args, **kwargs)
         else:
             print("no")
-            return JsonResponse({'status': '2000',
+            return JsonResponse({'status': '2000asd',
                                  'text': 'NOT LOGIN'}
                                 )
     return decorator
