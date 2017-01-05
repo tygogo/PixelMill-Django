@@ -9,10 +9,8 @@ def api_login_required(view):
 
     def decorator(request, *args, **kwargs):
         if request.user.is_authenticated():
-            print("yes")
             return view(request, *args, **kwargs)
         else:
-            print("no")
             return JsonResponse({'status': '2000',
                                  'text': 'NOT LOGIN'}
                                 )

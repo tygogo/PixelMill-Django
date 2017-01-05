@@ -536,17 +536,32 @@ def api_dislike(request):
 @api_login_required
 def api_myinfo(request):
     r_dict = {}
+    print(1)
     user = request.user
+    print(2)
 
     r_dict["pid"] = user.pk
+    print(3)
+
     r_dict["username"] = user.username
+    print(4)
+
     if user.profile.avatar:
         r_dict["avatar"] = user.profile.avatar.url
+        print(5)
+
     else:
         r_dict["avatar"] = ""
+        print(6)
+
     r_dict["profile"] = user.profile.profile
+    print(7)
+
     r_dict["followCount"] = user.follow.count()
+    print(8)
+
     r_dict["followerCount"] = user.follower.count()
+    print(9)
 
     return JsonResponse(r_dict)
 
