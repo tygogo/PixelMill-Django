@@ -20,7 +20,6 @@ from django.dispatch import receiver
 # 登陆相关
 @csrf_exempt
 @api_get_only
-@api_login_required
 def api_logout(request):
     print("api_logout")
     logout(request)
