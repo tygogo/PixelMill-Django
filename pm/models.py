@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 SEX_CHOICE = ((0, '女'),
               (1, '男'),
-              )
+             )
 
 MESSAGE_CHOICE = (
     (0, '评论'),#
@@ -16,7 +16,7 @@ MESSAGE_CHOICE = (
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE,related_name="profile")
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
     sex = models.IntegerField('性别', choices=SEX_CHOICE, default=0)
     age = models.PositiveIntegerField('年龄', default=5)
     profile = models.TextField('简介', max_length=32, default='...')

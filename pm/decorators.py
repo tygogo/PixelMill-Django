@@ -13,7 +13,7 @@ def api_login_required(view):
         else:
             return JsonResponse({'status': '2000',
                                  'text': 'NOT LOGIN'}
-                                )
+                               )
     return decorator
 
 
@@ -28,7 +28,7 @@ def api_post_only(view):
         else:
             return JsonResponse({'status': '2001',
                                  'text': 'POST ONLY'}
-                                )
+                               )
     return decorator
 
 
@@ -43,5 +43,5 @@ def api_get_only(view):
         else:
             return JsonResponse({'status': '2002',
                                  'text': 'GET ONLY'}
-                                )
+                               )
     return decorator
