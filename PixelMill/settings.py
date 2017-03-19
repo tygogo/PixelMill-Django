@@ -33,6 +33,7 @@ if socket.gethostname() == 'GoGodeMacBook-Pro.local':
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
+    ALLOWED_HOSTS = ['*']
 else: # 生产服务器
     DEBUG = False
     TEMPLATE_DEBUG = False
@@ -46,8 +47,9 @@ else: # 生产服务器
             'PORT': '3306',
         }
     }
+    ALLOWED_HOSTS += ["192.168.1.103", '127.0.0.1', 'localhost','ayogg.com']
 
-ALLOWED_HOSTS = ["192.168.1.103", '127.0.0.1', 'localhost','ayogg.com']
+
 
 
 # Application definition
