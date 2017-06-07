@@ -24,6 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0b04@c(7@t+y5=@@n*8%*azud@8$upky-vu@%t8@6az_s+13#q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+ALLOWED_HOSTS = []
 if socket.gethostname() == 'GoGodeMacBook-Pro.local':
     DEBUG = True
     TEMPLATE_DEBUG = True
@@ -49,7 +50,7 @@ else: # 生产服务器
     }
     ALLOWED_HOSTS += ["192.168.1.103", '127.0.0.1', 'localhost','ayogg.com']
 
-DEBUG = True
+
 
 
 # Application definition
