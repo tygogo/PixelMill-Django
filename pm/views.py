@@ -522,7 +522,7 @@ def api_dislike(request):
         user.save()
         r_dict['status'] = 1
         r_dict['text'] = 'SUCCESS',
-        r_dict['new_count'] = p.liker.all().count()
+        r_dict['new_count'] = p.liker.count()
     else:
         r_dict['status'] = 0
         r_dict['text'] = 'PAINT NOT EXIST'
