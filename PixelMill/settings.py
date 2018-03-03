@@ -35,7 +35,7 @@ if socket.gethostname() == 'GoGodeMacBook-Pro.local':
         }
     }
     ALLOWED_HOSTS = ['*']
-else: # 生产服务器
+else: # 生产
     DEBUG = False
     TEMPLATE_DEBUG = False
     DATABASES = {
@@ -43,7 +43,7 @@ else: # 生产服务器
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'pixelMill',
             'USER': 'root',
-            'PASSWORD': 'nishengri7',
+            'PASSWORD': ‘*******’,
             'HOST': '127.0.0.1',
             'PORT': '3306',
         }
