@@ -1,0 +1,17 @@
+###
+
+GET  http://127.0.0.1:8000/pm/api_regist HTTP/1.1
+
+
+###
+
+GET https://m.baidu.com/ssid=ca21b6e0b4ced5fcbec8b5d8c7f29435/s HTTP/1.1
+
+{
+    "word":"haha",
+}
+###
+
+GET https://m.baidu.com/ssid=ca21b6e0b4ced5fcbec8b5d8c7f29435/s?word=haha HTTP/1.1
+
+###

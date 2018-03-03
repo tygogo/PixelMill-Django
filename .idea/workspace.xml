@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55eb08df-f121-4a8a-b3e7-eb13f4ca09a7" name="Default" comment="&#10;kkk">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/x" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/xxx;" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PixelMill/settings.py" afterPath="$PROJECT_DIR$/PixelMill/settings.py" />
-    </list>
+    <list default="true" id="55eb08df-f121-4a8a-b3e7-eb13f4ca09a7" name="Default" comment="" />
     <ignored path="PixelMill.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -4202,7 +4197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496847446214</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="&#10;kkk">
+      <created>1520099547501</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1520099547502</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TodoView">
